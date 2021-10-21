@@ -19,20 +19,18 @@ import { CallbackComponent } from './callback/callback.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
     NbAuthModule.forRoot({
       strategies: [
         NbOAuth2AuthStrategy.setup({
           name: 'google',
           clientId:
-            '181002872079-78tf2kthnoplnlj133af7jgb3ba44top.apps.googleusercontent.com',
+            '181002872079-78tf*******************a44top.apps.googleusercontent.com',
           clientSecret: '',
           authorize: {
             endpoint: 'https://accounts.google.com/o/oauth2/v2/auth',
             responseType: NbOAuth2ResponseType.TOKEN,
             scope: 'https://www.googleapis.com/auth/userinfo.profile',
-            redirectUri:
-              'https://akveo.github.io/nebular/example/oauth2/callback',
+            redirectUri: 'http://localhost:4100/example/oauth2/callback',
           },
 
           redirect: {

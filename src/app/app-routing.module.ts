@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'callback',
     component: CallbackComponent,
   },
+  { path: '**', component: LoginComponent },
 ];
 
 @NgModule({
